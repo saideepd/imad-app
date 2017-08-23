@@ -5,7 +5,10 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles   =   {
+
+
+function createTemplate(data)   {
+    var articles   =   {
     'article-one' : {
       title:  'Artice One | Saideep Dicholkar',
       heading: 'Article One',
@@ -42,8 +45,6 @@ var articles   =   {
             </p>`
     }
 };
-
-function createTemplate(data)   {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
