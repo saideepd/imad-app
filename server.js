@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 
 var articles   =   {
     'article-one' : {
-      name:  'Artice One | Saideep Dicholkar',
+      title:  'Artice One | Saideep Dicholkar',
       heading: 'Article One',
       date: 'Aug 21st, 2017',
       content: `
@@ -32,7 +32,7 @@ var articles   =   {
     },
     
     'article-two'  :   {
-        name:  'Artice Two | Saideep Dicholkar',
+        title:  'Artice Two | Saideep Dicholkar',
         heading: 'Article Two',
         date: 'Aug 31st, 2017',
         content: `
@@ -42,7 +42,7 @@ var articles   =   {
     },
     
     'article-three'    :   {
-        name:  'Artice Three | Saideep Dicholkar',
+        title:  'Artice Three | Saideep Dicholkar',
         heading: 'Article Three',
         date: 'Aug 1st, 2017',
         content: `
@@ -53,7 +53,7 @@ var articles   =   {
 };
 
 function createTemplate(data)   {
-    var name = data.name;
+    var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
@@ -62,7 +62,7 @@ function createTemplate(data)   {
         <html>
             <head>
                 <title>
-                    ${name}
+                    ${title}
                 </title>
                 <meta name="viewport" content="width = deivce-width, initial-scale = 1"/>
                 <link href="/ui/style.css" rel="stylesheet"/>
@@ -129,7 +129,7 @@ app.get("/articles/:articleName", function (req, res) {
     //articles[articleName] == {} constant object for article one
     
     //SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
-    pool.query("SELECT * FROM article WHERE name = $1", [req.params.articleName], function (err, result) {
+    pool.query("SELECT * FROM article WHERE title = $1", [req.params.articleName], function (err, result) {
        if(err) {
            res.status(500).send(err.toString());
        } else {
