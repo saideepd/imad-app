@@ -19,8 +19,8 @@ var articles   =   {
       title:  'Artice One | Saideep Dicholkar',
       heading: 'Article One',
       date: 'Aug 21st, 2017',
-      content: 
-                `<p>
+      content: `
+                <p>
                     This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
                 </p>
                 <p>
@@ -35,8 +35,8 @@ var articles   =   {
         title:  'Artice Two | Saideep Dicholkar',
         heading: 'Article Two',
         date: 'Aug 31st, 2017',
-        content: 
-            `<p>
+        content: `
+            <p>
                 This is the content four my second article.
             </p>`
     },
@@ -45,8 +45,8 @@ var articles   =   {
         title:  'Artice Three | Saideep Dicholkar',
         heading: 'Article Three',
         date: 'Aug 1st, 2017',
-        content: 
-            `<p>
+        content: `
+            <p>
                     This is the content for my third article.
             </p>`
     }
