@@ -124,7 +124,7 @@ app.get('/submit-name', function (req, res) { // /submit-name?name=xxxx
    res.send(JSON.stringify(names));
 });
 
-app.get("/articles/articleName", function (req, res) {
+app.get("/articles/:articleName", function (req, res) {
     //articleName == article-one
     //articles[articleName] == {} constant object for article one
     
